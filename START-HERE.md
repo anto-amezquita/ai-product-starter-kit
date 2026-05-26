@@ -2,12 +2,12 @@
 
 **Using Claude Code?** Type `/project-kickoff` in any conversation.
 
-**Using another AI assistant (Gemini, GPT, Cursor, etc.)?** Open it and say:
+**Using another AI assistant (Gemini, GPT, Cursor, etc.)?** Paste the contents of `guide/stages/00-behavior.md`, then `guide/stages/01-idea.md`, and say:
 
 ```md
-Use `guide/start-a-new-project.md` to guide me through starting a new digital product.
+Use the guide I'm about to share to help me start a new digital product.
 
-Ask me one main question at a time. Help me think when I am unsure by suggesting useful options and trade-offs. Keep track of decisions, assumptions, and open questions as we go. Once the idea is clear enough, help me create the core project documents and the first spec.
+Ask me one main question at a time. Help me think when I am unsure by suggesting useful options and trade-offs. Keep track of decisions, assumptions, and open questions as we go. When I finish a stage, I'll paste the next stage file and we continue from there.
 ```
 
 Either path takes you through seven stages:
