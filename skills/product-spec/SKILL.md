@@ -41,32 +41,59 @@ Do not use a full spec for:
 ## Core behaviour
 
 - Start from the user problem and desired outcome.
-- Preserve the link between product intent, UX behaviour, and implementation.
-- Ask only the questions needed to remove important ambiguity.
-- When information is missing but not blocking, make a reasonable assumption and label it.
-- Surface trade-offs, dependencies, risks, and open questions explicitly.
-- Keep the spec compact, but not vague.
-- Make requirements testable.
-- Do not hide unresolved product decisions inside technical language.
+- Keep product intent, UX behaviour, and implementation decisions connected throughout the spec.
+- Ask at most one clarifying question at a time — do not front-load a list before starting work.
+- When information is missing but not blocking, make a reasonable assumption, label it clearly, and continue.
+- Surface trade-offs, dependencies, risks, and open questions explicitly — do not bury them inside technical language.
+- Make requirements testable, not aspirational.
 - Do not invent product behaviour that conflicts with the core docs.
+- Do not let early sections grow at the expense of acceptance criteria — criteria are what make the spec executable.
 
-## Required structure
+## Workflow
 
-Follow `docs/spec.md`.
+### 1. Understand the brief
 
-Every spec must cover:
+Identify:
 
-1. Overview
-2. Goals and non-goals
-3. User experience
-4. Functional requirements
-5. Non-functional requirements
-6. Information architecture and data
-7. Technical approach
-8. Interface and component breakdown
-9. Risks, trade-offs, assumptions, and open questions
-10. Acceptance criteria
-11. Implementation plan
+- the feature or product slice being specified
+- the user problem it solves and who it solves it for
+- the desired outcome when the work is done
+- any constraints or context already known
+
+If the brief is too vague to start, ask one targeted question before proceeding.
+
+### 2. Read context
+
+Review the docs listed above. Look for:
+
+- existing patterns this feature should follow or extend
+- constraints in `architecture.md` that affect the approach
+- brand or content rules that shape the UX
+- overlapping or related specs in `/specs`
+
+### 3. Surface gaps
+
+Before drafting, note:
+
+- what is known, what is assumed, and what is genuinely unknown
+- which gaps must be resolved before writing (ask once, concisely)
+- which gaps can be assumed and labelled — keep them visible, never buried
+
+### 4. Write the spec
+
+Follow the structure in `docs/spec.md`.
+
+Guidance for the sections most likely to go wrong:
+
+- **Goals vs. non-goals:** goals describe outcomes for users; non-goals explicitly exclude things that would otherwise creep into scope
+- **Functional requirements:** write as verifiable statements — if a QA engineer couldn't test it directly, rewrite it
+- **Technical approach:** describe responsibilities and shape, not implementation detail — unless the detail affects behaviour, architecture, or future maintainability
+- **Interface and component breakdown:** cover states before structure — states drive complexity and are the part most often skipped
+- **Acceptance criteria:** write as pass/fail statements, not hoped-for outcomes — these are the definition of done
+
+### 5. Review
+
+Check the spec against the checklist below before returning it.
 
 ## File naming
 
@@ -78,28 +105,38 @@ Use lowercase, hyphenated, specific names.
 
 ## Review before finalising
 
-Check:
-
-- Is the user problem clear?
+- Is the user problem clear and specific?
 - Is the desired outcome clear?
-- Are goals distinct from tasks?
-- Is the scope explicit?
-- Are non-goals included?
-- Are major flows covered?
-- Are loading, empty, success, error, and permission states considered where relevant?
-- Are requirements specific and testable?
-- Are accessibility and responsive behaviour covered where relevant?
+- Are goals stated as outcomes, not implementation tasks?
+- Are non-goals explicit?
+- Are the main user flows described step by step?
+- Are loading, empty, success, error, and permission states covered where relevant?
+- Are functional requirements specific and testable?
+- Are accessibility and responsive behaviour addressed where relevant?
 - Are data, dependencies, and permissions visible?
-- Are assumptions and decisions separated?
-- Could a competent contributor begin work without inventing the product?
+- Is the technical approach described at the right level — shape and responsibilities, not over-specified implementation?
+- Are assumptions, decisions, and open questions clearly separated?
+- Are acceptance criteria verifiable pass/fail statements?
+- Could a competent contributor begin work without the author in the room for every major decision?
 
-## Final response
+## Output format
 
-Return:
+```md
+## Spec created
+`/specs/YYYY-MM-DD-feature-name.md`
 
-1. the spec file created or updated
-2. a short summary of the feature
-3. key decisions
-4. assumptions
-5. open questions
-6. the recommended next step
+## Summary
+[One or two sentences on what this spec covers.]
+
+## Key decisions
+- [Decision]
+
+## Assumptions
+- [Assumption — note what would change if this is wrong]
+
+## Open questions
+- [Question — who should answer it, or what unblocks it]
+
+## Recommended next step
+[One clear action: design exploration, ADR, stakeholder sign-off, or start implementation.]
+```
