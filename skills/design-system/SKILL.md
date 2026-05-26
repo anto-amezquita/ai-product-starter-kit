@@ -47,12 +47,17 @@ Use a token when the value represents a repeatable design decision, such as:
 - shadow
 - breakpoint
 - z-index
+- elevation level
 
 Ask:
 
 - Does this encode a repeated decision?
 - Should multiple components depend on it?
 - Could it change by brand or theme?
+
+**Token chain:** tokens follow a three-tier hierarchy — primitive → semantic → component. Semantic tokens reference primitives; component tokens reference semantic tokens. No component definition should hardcode a raw value that already exists as a token.
+
+**Radius as design language:** corner radius is not just a dimension — it communicates personality (sharp = structured, rounded = approachable). Treat it as a deliberate brand decision, not a visual detail.
 
 ### Component
 
@@ -100,21 +105,30 @@ Check:
 - token hierarchy
 - whether a new token solves a repeatable need
 
-### 2. Components
+### 2. Elevation
+
+Check:
+
+- how depth is communicated (shadow, tint, blur, border, opacity, z-index — or a combination)
+- whether the elevation system is consistent and token-driven
+- whether depth decisions encode hierarchy or are applied arbitrarily
+
+### 3. Components
 
 Check:
 
 - clear purpose
 - anatomy
 - variants
-- states
+- states — at minimum: default, hover, focus, active, disabled. Consider also: loading, error, empty, selected
 - responsive behaviour
 - content rules
 - accessibility behaviour
 - API clarity
 - separation between reusable UI and feature logic
+- all token references point to semantic tokens, not raw values
 
-### 3. Patterns
+### 4. Patterns
 
 Check:
 
@@ -125,7 +139,7 @@ Check:
 - accessibility behaviour
 - responsive behaviour
 
-### 4. Consistency
+### 5. Consistency
 
 Check:
 
@@ -135,6 +149,8 @@ Check:
 - inconsistent state treatment
 - component overlap
 - old patterns that should be retired
+- raw values appearing in two or more places without a token — each is a tokenisation candidate
+- tokens that nothing references — each is a removal or consolidation candidate
 
 ## Workflow
 
