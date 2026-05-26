@@ -81,6 +81,8 @@ Look for:
 - spacing rules
 - interaction patterns
 - responsive conventions
+- component structure, naming, and export conventions
+- testing patterns already in use
 
 ### 3. Propose the approach
 
@@ -98,6 +100,8 @@ Follow `architecture.md`.
 
 Keep components reusable and avoid leaking feature-specific logic into shared UI primitives.
 
+Avoid introducing dependencies for patterns the codebase already handles; consider rendering cost when choosing between equivalent approaches.
+
 ### 5. Validate
 
 Review against:
@@ -107,6 +111,8 @@ Review against:
 - `content.md`
 - `quality.md`
 - the relevant spec acceptance criteria
+
+Check that interactive components, complex state transitions, and error states have test coverage consistent with the project's existing testing patterns.
 
 When the environment supports it, inspect the UI in a real browser at multiple sizes and iterate on visual polish and interaction states.
 
