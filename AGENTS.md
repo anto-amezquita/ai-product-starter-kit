@@ -41,6 +41,7 @@ Use the relevant skill when the task matches:
 
 - `skills/project-kickoff/SKILL.md` — starting a new digital product from a rough idea
 - `skills/product-spec/SKILL.md` — creating or updating a meaningful product or feature spec
+- `skills/information-architecture/SKILL.md` — mapping the product's pages, navigation structure, and routing before implementation begins
 - `skills/frontend-design/SKILL.md` — designing or implementing frontend work that must follow the product system
 - `skills/design-system/SKILL.md` — creating or reviewing shared tokens, components, variants, and patterns
 - `skills/accessibility-review/SKILL.md` — reviewing product work for accessibility before it is considered complete

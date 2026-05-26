@@ -144,7 +144,13 @@ Example:
 7. Setup
 ```
 
-Do not show the full indicator after every single message; use it at natural checkpoints.
+Show the indicator at exactly three moments:
+
+1. **Opening** — after the brief intro, before the first Stage 1 question.
+2. **Stage transitions** — when moving from one stage to the next.
+3. **Long stages** — if a single stage involves five or more back-and-forth exchanges, attach it once to a natural summary moment mid-stage.
+
+Do not show it after every message.
 
 ---
 
@@ -202,6 +208,30 @@ Capture:
 Move on when you can say:
 
 > We have a rough idea of what this is and why it might matter.
+
+## Stage checkpoint
+
+When the stage completion test is met:
+
+1. Show the progress indicator with Stage 1 marked ✓ and Stage 2 marked →.
+2. Emit a compact summary the user can copy if they need to resume later:
+
+```
+Resuming project kickoff from Stage 2 — Product direction. Stage 1 complete.
+
+Key decisions:
+- [decision]
+
+Assumptions:
+- [assumption, if any]
+
+Open questions:
+- [question, if any]
+```
+
+3. Ask: "Ready to continue to Stage 2 — Product direction, or would you like to pause here?"
+
+If the user pauses, let them know they can resume by starting a new `/project-kickoff` session (or using the kickoff prompt in START-HERE.md) and immediately pasting this checkpoint — the AI will see the completed stages and continue from the next one.
 
 ---
 
@@ -275,6 +305,30 @@ Draft content for `docs/product-north-star.md`:
 
 Move on when you can explain the product in one clear paragraph and say what the first version is **not**.
 
+## Stage checkpoint
+
+When the stage completion test is met:
+
+1. Show the progress indicator with Stages 1–2 marked ✓ and Stage 3 marked →.
+2. Emit a compact summary the user can copy if they need to resume later:
+
+```
+Resuming project kickoff from Stage 3 — Brand character. Stages 1–2 complete.
+
+Key decisions:
+- [decision]
+
+Assumptions:
+- [assumption, if any]
+
+Open questions:
+- [question, if any]
+```
+
+3. Ask: "Ready to continue to Stage 3 — Brand character, or would you like to pause here?"
+
+If the user pauses, let them know they can resume by starting a new `/project-kickoff` session (or using the kickoff prompt in START-HERE.md) and immediately pasting this checkpoint — the AI will see the completed stages and continue from the next one.
+
 ---
 
 # Stage 3 — Brand character
@@ -345,6 +399,30 @@ Draft content for `docs/brand.md`:
 
 Move on when the product has a character that can guide design and writing decisions.
 
+## Stage checkpoint
+
+When the stage completion test is met:
+
+1. Show the progress indicator with Stages 1–3 marked ✓ and Stage 4 marked →.
+2. Emit a compact summary the user can copy if they need to resume later:
+
+```
+Resuming project kickoff from Stage 4 — Experience direction. Stages 1–3 complete.
+
+Key decisions:
+- [decision]
+
+Assumptions:
+- [assumption, if any]
+
+Open questions:
+- [question, if any]
+```
+
+3. Ask: "Ready to continue to Stage 4 — Experience direction, or would you like to pause here?"
+
+If the user pauses, let them know they can resume by starting a new `/project-kickoff` session (or using the kickoff prompt in START-HERE.md) and immediately pasting this checkpoint — the AI will see the completed stages and continue from the next one.
+
 ---
 
 # Stage 4 — Experience direction
@@ -397,6 +475,30 @@ Project-specific direction for `docs/design.md` and `docs/content.md`:
 ## Stage completion test
 
 Move on when the product has a clear first user journey and a believable interaction style.
+
+## Stage checkpoint
+
+When the stage completion test is met:
+
+1. Show the progress indicator with Stages 1–4 marked ✓ and Stage 5 marked →.
+2. Emit a compact summary the user can copy if they need to resume later:
+
+```
+Resuming project kickoff from Stage 5 — Technical direction. Stages 1–4 complete.
+
+Key decisions:
+- [decision]
+
+Assumptions:
+- [assumption, if any]
+
+Open questions:
+- [question, if any]
+```
+
+3. Ask: "Ready to continue to Stage 5 — Technical direction, or would you like to pause here?"
+
+If the user pauses, let them know they can resume by starting a new `/project-kickoff` session (or using the kickoff prompt in START-HERE.md) and immediately pasting this checkpoint — the AI will see the completed stages and continue from the next one.
 
 ---
 
@@ -454,6 +556,30 @@ Draft content for `docs/architecture.md`:
 
 Move on when there is a credible technical path for the first version.
 
+## Stage checkpoint
+
+When the stage completion test is met:
+
+1. Show the progress indicator with Stages 1–5 marked ✓ and Stage 6 marked →.
+2. Emit a compact summary the user can copy if they need to resume later:
+
+```
+Resuming project kickoff from Stage 6 — First build. Stages 1–5 complete.
+
+Key decisions:
+- [decision]
+
+Assumptions:
+- [assumption, if any]
+
+Open questions:
+- [question, if any]
+```
+
+3. Ask: "Ready to continue to Stage 6 — First build, or would you like to pause here?"
+
+If the user pauses, let them know they can resume by starting a new `/project-kickoff` session (or using the kickoff prompt in START-HERE.md) and immediately pasting this checkpoint — the AI will see the completed stages and continue from the next one.
+
 ---
 
 # Stage 6 — First build
@@ -494,6 +620,30 @@ Use `docs/spec.md` as the structure.
 ## Stage completion test
 
 Move on when the first build is clear enough that implementation can begin without major product guessing.
+
+## Stage checkpoint
+
+When the stage completion test is met:
+
+1. Show the progress indicator with Stages 1–6 marked ✓ and Stage 7 marked →.
+2. Emit a compact summary the user can copy if they need to resume later:
+
+```
+Resuming project kickoff from Stage 7 — Project setup. Stages 1–6 complete.
+
+Key decisions:
+- [decision]
+
+Assumptions:
+- [assumption, if any]
+
+Open questions:
+- [question, if any]
+```
+
+3. Ask: "Ready to continue to Stage 7 — Project setup and next step, or would you like to pause here?"
+
+If the user pauses, let them know they can resume by starting a new `/project-kickoff` session (or using the kickoff prompt in START-HERE.md) and immediately pasting this checkpoint — the AI will see the completed stages and continue from the next one.
 
 ---
 
@@ -539,6 +689,17 @@ At the end, provide:
 5. the files created or updated
 6. the best next action
 7. a ready-to-use implementation prompt
+
+## Offering Linear setup
+
+After presenting items 1–6, and if the project involves more than one person or the user has mentioned wanting visible progress tracking, offer:
+
+> One more optional step: I can set up the Linear structure for this project — milestones, labels, and links to your docs — so the work is visible from day one. Want to do that now?
+
+If yes, follow `skills/project-setup-linear/SKILL.md`.
+If no, proceed to the implementation prompt.
+
+This step is optional. The offer is enough.
 
 ### Example final implementation prompt
 

@@ -54,23 +54,23 @@ Keep the shared truth in `/docs`, not inside each adapter file.
 
 ## Starting a new project with the guide
 
-Read `START-HERE.md`, then ask your AI assistant to use:
-
-`guide/start-a-new-project.md`
+Read `START-HERE.md`. In Claude Code, run `/project-kickoff` directly. With other AI assistants, follow the prompt in `START-HERE.md` to load `guide/start-a-new-project.md`.
 
 The guide will lead you through the product idea, direction, brand, experience, technical setup, first spec, and next build step one question at a time.
 
 
 ## Reusable skills
 
-This starter kit includes six skills in `/skills`:
+This starter kit includes eight skills in `/skills`:
 
 - `project-kickoff`
 - `product-spec`
+- `information-architecture`
 - `frontend-design`
 - `accessibility-review`
 - `design-system`
 - `quality-gate`
+- `project-setup-linear`
 
 The docs hold the project's truth. The skills hold repeatable ways of working with that truth.
 
@@ -79,7 +79,9 @@ A useful default workflow is:
 ```txt
 rough idea
 → project-kickoff
+→ project-setup-linear  (or via the offer at end of /project-kickoff)
 → product-spec
+→ information-architecture
 → frontend-design
 → design-system, when shared patterns emerge
 → accessibility-review

@@ -73,6 +73,10 @@ If major technical choices are made, create an ADR in `/decisions`.
 
 Not all docs need to reach final form in one session — create what the conversation has shaped clearly, and note what remains unresolved.
 
+## Optional: Linear setup
+
+After completing all required outputs, offer to run `project-setup-linear` if the project involves a team or the user wants visible progress tracking. Offer it; do not require it.
+
 ## Output format
 
 End the kickoff with:
