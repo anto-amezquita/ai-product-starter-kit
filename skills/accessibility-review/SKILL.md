@@ -14,12 +14,13 @@ This skill should help identify issues, explain their user impact, and suggest c
 Before reviewing, read:
 
 1. `docs/product-north-star.md`
-2. `docs/design.md`
-3. `docs/content.md`
-4. `docs/architecture.md`
-5. `docs/quality.md`
-6. the relevant spec in `/specs`
-7. the relevant UI implementation, components, and styles
+2. `docs/brand.md`
+3. `docs/design.md`
+4. `docs/content.md`
+5. `docs/architecture.md`
+6. `docs/quality.md`
+7. the relevant spec in `/specs`
+8. the relevant UI implementation, components, and styles
 
 ## Core behaviour
 
@@ -53,10 +54,12 @@ Check:
 Check:
 
 - landmarks and headings support understanding
+- heading hierarchy is sequential — no skipped levels, no headings used for visual styling
 - buttons, links, inputs, lists, tables, and dialogs use appropriate semantics
-- controls have meaningful accessible names
+- interactive ARIA patterns follow expected keyboard conventions — tabs use arrow keys, dialogs trap focus and return it on close, comboboxes handle expansion and selection correctly, accordions toggle on Enter/Space
+- controls have meaningful accessible names — not "button", "image", or the visual label repeated as a description
 - decorative content is hidden when appropriate
-- status changes are announced when needed
+- dynamic content changes are announced via ARIA live regions at the appropriate politeness level (`polite` for updates, `assertive` for urgent interruptions, `status`/`alert` roles where semantically correct)
 
 ### 3. Forms and errors
 
@@ -65,6 +68,7 @@ Check:
 - labels are persistent and meaningful
 - helper text is connected to fields where needed
 - required fields are clear
+- `autocomplete` attributes are present on fields with a known input purpose (name, email, address, phone, card number) — WCAG 1.3.5
 - errors identify the problem and the next step
 - invalid fields expose their state programmatically
 
@@ -72,11 +76,13 @@ Check:
 
 Check:
 
-- text contrast
-- non-text contrast for controls and focus indicators
+- text contrast meets 4.5:1 for normal text, 3:1 for large text (18pt+ or 14pt+ bold) — WCAG 1.4.3
+- non-text contrast meets 3:1 for UI components and focus indicators — WCAG 1.4.11
 - meaning is not conveyed by colour alone
-- disabled states remain understandable
+- disabled states remain understandable without relying solely on reduced opacity
 - charts, status, and alerts have non-colour cues when relevant
+
+Contrast ratios should be verified against the brand palette in `brand.md`.
 
 ### 5. Content and language
 
@@ -121,15 +127,14 @@ Identify:
 
 ### 2. Inspect the experience
 
-Review:
+Walk through the core flow as a user would, then revisit each review area systematically:
 
-- core flow
-- all relevant states
-- keyboard behaviour
-- reading order
-- focus management
-- responsive behaviour
-- error handling
+- trace keyboard-only navigation from start to finish
+- check reading order matches visual hierarchy in the source
+- verify focus is visible, logical, and managed correctly across all interactive patterns
+- confirm all relevant states — default, hover, focus, active, disabled, loading, error, empty
+- test the narrowest realistic viewport and text resize to 200%
+- read error states and instructions as a first-time user would — checking for specificity and non-blame tone
 
 ### 3. Produce findings
 
