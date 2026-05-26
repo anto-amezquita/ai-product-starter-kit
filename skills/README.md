@@ -67,6 +67,20 @@ Use the instructions in `skills/product-spec/SKILL.md` to help me write a spec.
 
 The YAML front matter at the top of each skill file is only used by Claude Code — other tools can ignore it.
 
+## Maintaining skills
+
+Skills drift from actual practice. The right time to update is immediately after running one through a real task — that's when the gap between the documented method and the actual method is clearest.
+
+For deeper reviews, the process that works:
+
+1. **Read the skill** — note what feels over-specified, under-specified, or no longer true.
+2. **Search for external references** — community cursor rules, published coding guidelines, or comparable workflows from other teams. Look for intent, not implementation.
+3. **Separate intentional choices from gaps** — some absences are design decisions (e.g. stack-agnostic language). Don't fill those. Focus on gaps that would cause an agent to produce worse output.
+4. **Propose additions that preserve the skill's character** — each addition should feel like it belongs, not like it was imported from a different philosophy.
+5. **Self-review after applying** — read the skill again as a whole. Check for duplicated principles, vague anchors, and instructions that depend on things that may not exist yet.
+
+This process requires judgment at every step. It works as a conversation, not as an automated skill.
+
 ## Possible additions later
 
 - `content-review`
