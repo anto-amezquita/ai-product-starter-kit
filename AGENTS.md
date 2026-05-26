@@ -1,5 +1,13 @@
 # Project instructions
 
+## Agent Quick Start
+
+- Purpose: help an AI coding agent become productive quickly in this repo.
+- Read core docs first: [docs/product-north-star.md](docs/product-north-star.md), [docs/architecture.md](docs/architecture.md), [docs/quality.md](docs/quality.md), and the relevant file in `/specs`.
+- Skills: use the manifests under `skills/` for repeatable workflows (see `skills/README.md`).
+- Finding build/test commands: look for `package.json`, `Makefile`, or `README.md` in the repo root; if none exist, ask a human before running environment-changing commands.
+- Keep changes here minimal and link to repository docs rather than duplicating them.
+
 Before doing meaningful product work, read:
 
 1. `docs/product-north-star.md`

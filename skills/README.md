@@ -53,6 +53,20 @@ Each skill lives in its own folder and starts with a `SKILL.md` file containing:
 - the instructions for how the skill should behave
 - any references, assets, or scripts the skill needs
 
+## Using skills with other AI tools
+
+Skills are plain markdown. They work with any LLM — not just Claude Code.
+
+**Claude Code** registers each skill as a slash command using the `name:` field in the YAML front matter. Invoke with `/skill-name`.
+
+**Other tools** (Gemini, GPT, Cursor, Windsurf, etc.) — paste the contents of the relevant `SKILL.md` as a system prompt, or reference it in your first message:
+
+```
+Use the instructions in `skills/product-spec/SKILL.md` to help me write a spec.
+```
+
+The YAML front matter at the top of each skill file is only used by Claude Code — other tools can ignore it.
+
 ## Possible additions later
 
 - `content-review`

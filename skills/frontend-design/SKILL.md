@@ -22,6 +22,8 @@ Before designing or implementing, read:
 7. the relevant spec in `/specs`
 8. existing components, tokens, and nearby product patterns
 
+If any of these files are missing, ask before assuming — do not substitute generic defaults for undecided product decisions.
+
 ## Core design priorities
 
 - Start with the product context and user task, not component count.
@@ -106,7 +108,7 @@ Review against:
 - `quality.md`
 - the relevant spec acceptance criteria
 
-When the environment supports it, inspect the UI in a real browser at multiple sizes and iterate on visual polish and interaction states. OpenAI's frontend guidance specifically recommends browser-based iteration for responsive frontend work. citeturn850801search3
+When the environment supports it, inspect the UI in a real browser at multiple sizes and iterate on visual polish and interaction states.
 
 ## Final response
 
