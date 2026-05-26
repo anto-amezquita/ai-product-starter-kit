@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(git commit -m ' *)",
+      "Bash(curl -s https://api.github.com/repos/anthropics/claude-code/contents/)",
+      "Bash(gh api *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit add skills/design-system/SKILL.md)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit commit -m ' *)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit push)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit log --oneline -5)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit add skills/product-spec/SKILL.md)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit add skills/accessibility-review/SKILL.md)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit add skills/quality-gate/SKILL.md)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit add skills/project-setup-linear/SKILL.md)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit add skills/project-kickoff/SKILL.md)",
+      "WebFetch(domain:medium.com)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit add skills/information-architecture/ skills/README.md)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit diff HEAD)",
+      "Bash(grep -n \"Resuming project kickoff\\\\|^---$\" /Users/anam/Documents/GitHub/ai-product-starter-kit/guide/start-a-new-project.md)",
+      "Bash(git -C /Users/anam/Documents/GitHub/ai-product-starter-kit add AGENTS.md README.md START-HERE.md guide/start-a-new-project.md skills/project-kickoff/SKILL.md)"
+    ]
+  }
+}
