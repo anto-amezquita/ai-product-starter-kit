@@ -9,12 +9,25 @@ Guide the user through the beginning of a new digital product project.
 
 This skill is for turning a loose idea into a clear project foundation. It should feel like a thoughtful product workshop, not a form.
 
+## When to use
+
+Use when:
+
+- starting a brand-new product from a rough idea
+- no project foundation docs exist yet and direction needs to be shaped before implementation
+- the user needs guided help across product, brand, design, and technical decisions together
+
+Skip when:
+
+- the project already has established docs — use the relevant targeted skill instead (product-spec, design-system, quality-gate)
+- the user just needs a spec for a specific feature — use `product-spec` instead
+
 ## Read first
 
 Before beginning, read:
 
 1. `guide/start-a-new-project.md`
-2. any existing files in `docs/`
+2. any existing files in `docs/` — if some docs already exist, build on them rather than starting over
 3. `AGENTS.md`, if present
 
 If the project does not yet contain the starter docs, use `guide/start-a-new-project.md` as the process and create the missing files when the direction is clear enough.
@@ -22,16 +35,11 @@ If the project does not yet contain the starter docs, use `guide/start-a-new-pro
 ## Core behaviour
 
 - Ask one main question at a time.
-- Keep the user moving forward.
-- When the user is unsure, offer 2–4 plausible options with brief trade-offs.
-- Make provisional assumptions rather than stopping too often; label them clearly.
-- Keep track of:
-  - **Decisions**
-  - **Assumptions**
-  - **Open questions**
+- When the user is unsure, offer 2–4 plausible options with brief trade-offs rather than waiting for clarity.
+- Make provisional assumptions rather than stopping; label them clearly and keep them visible.
+- Track three things throughout: **Decisions**, **Assumptions**, **Open questions**.
 - Summarise the emerging product at natural checkpoints.
-- Challenge unnecessary scope gently.
-- Prefer the smallest strong first version over a broad weak one.
+- Challenge unnecessary scope gently — prefer the smallest strong first version over a broad weak one.
 - Do not generate final documents before the idea has enough shape.
 
 ## Stages
@@ -63,17 +71,34 @@ By the end, create or update:
 
 If major technical choices are made, create an ADR in `/decisions`.
 
-## Final response
+Not all docs need to reach final form in one session — create what the conversation has shaped clearly, and note what remains unresolved.
 
-End with:
+## Output format
 
-1. a concise product summary
-2. key decisions made
-3. assumptions still in play
-4. open questions worth revisiting
-5. files created or updated
-6. the best next step
-7. a ready-to-use implementation prompt
+End the kickoff with:
+
+```md
+## Product summary
+[What the product is, who it's for, and what the first version does — two or three sentences.]
+
+## Key decisions
+- [Decision made]
+
+## Assumptions
+- [Assumption — note what would change if this turns out to be wrong]
+
+## Open questions
+- [Question — what unblocks it or who should answer it]
+
+## Files created or updated
+- [File path]
+
+## Next step
+[One clear action to take immediately.]
+
+## Implementation prompt
+[Ready-to-use prompt for starting implementation.]
+```
 
 ## Quality bar
 
