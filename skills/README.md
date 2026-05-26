@@ -10,6 +10,9 @@ Use when starting a new digital product from a rough idea.
 ### `product-spec`
 Use when turning a product or feature idea into a buildable specification.
 
+### `information-architecture`
+Use when mapping the product's pages, navigation structure, content hierarchy, and routing before implementation begins.
+
 ### `frontend-design`
 Use when designing or implementing frontend work that should follow the project's own brand, design system, content rules, and technical constraints.
 
@@ -39,6 +42,7 @@ rough idea
 → project-kickoff
 → project-setup-linear
 → product-spec
+→ information-architecture
 → frontend-design
 → design-system, when shared patterns emerge
 → accessibility-review
