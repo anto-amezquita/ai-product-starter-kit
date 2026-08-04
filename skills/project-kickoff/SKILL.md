@@ -155,6 +155,10 @@ If major technical choices are made, create an ADR in `/decisions`.
 
 Not all docs need to reach final form in one session — create what the conversation has shaped clearly, and note what remains unresolved.
 
+## Handoff model
+
+The point of a solid spec is to enable a full handoff, not just a well-documented conversation. Once Stage 7 produces the implementation prompt, the expectation is: build end to end, log real decisions in `/decisions`, and only pause for genuine ambiguity — not for routine execution choices. See the example implementation prompt in `guide/stages/07-setup.md`.
+
 ## Optional: Linear setup
 
 After completing all required outputs, offer to run `project-setup-linear` if the project involves a team or the user wants visible progress tracking. Offer it; do not require it.

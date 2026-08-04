@@ -17,7 +17,10 @@ Create or update:
 /docs/quality.md
 /specs/YYYY-MM-DD-[first-spec].md
 AGENTS.md
+.claude/settings.json
 ```
+
+For `.claude/settings.json`, copy `templates/claude-settings.json` from the starter kit as the starting point, then add any project-specific tooling commands (e.g. `pnpm *`, `Bash(git -C * add:*)` for multi-package repos) surfaced during Stage 5. This exists so category-based permissions are in place from day one instead of accumulating one approved command at a time.
 
 If the project uses multiple AI coding tools, optionally add thin adapter files such as:
 
@@ -64,9 +67,12 @@ Before coding:
 - use `quality.md` as the definition of done
 
 During implementation:
+- build end to end without stopping for approval at each step
+- only pause if something in the spec is genuinely ambiguous, not for routine execution choices
 - reuse existing tokens, components, and patterns before creating new ones
 - do not invent product behaviour that is not supported by the spec
 - make any necessary assumptions explicit
+- log any real decisions made along the way in `/decisions`
 
 Before considering the work complete:
 - validate the implementation against the acceptance criteria

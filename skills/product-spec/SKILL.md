@@ -140,3 +140,5 @@ Use lowercase, hyphenated, specific names.
 ## Recommended next step
 [One clear action: design exploration, ADR, stakeholder sign-off, or start implementation.]
 ```
+
+Once implementation against this spec is complete, run `quality-gate` before considering the work done — a solid spec makes a good build likely, it does not confirm one happened.
