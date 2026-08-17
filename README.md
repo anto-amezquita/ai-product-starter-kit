@@ -1,6 +1,30 @@
 # AI Product Starter Kit
 
-This repository uses a small set of shared documents to keep product, design, architecture, and AI-assisted development aligned.
+A starting point for AI-assisted products that have to last longer than one
+session.
+
+Coding agents can read your code. What they can't read is the decision behind
+it — why this pattern and not the three you tried first, which brand rule is
+deliberate, what "done" means on this project. That reasoning usually lives in
+a chat window that closes, so the next session re-argues it instead of building
+on it.
+
+This kit keeps it. Six documents hold the project's stable truth, specs hold
+feature definitions, decisions hold the calls you've made and why, and eight
+skills hold the repeatable ways of working with all of it. Agents enter through
+`AGENTS.md` and read the same files a person would — nothing is written twice.
+
+A decision kept together with its reasoning can be amended when you know
+better. One kept without it can only be argued again from the start.
+
+**Where it fits.** Multi-session work over weeks, where a person is making real
+calls about product, brand, design, architecture and quality — especially
+working solo, with nobody to ask what was decided last month. It's the wrong
+tool for a weekend prototype, where the overhead outweighs the benefit, and it
+adds little to a mature codebase that's already well documented.
+
+This is a GitHub template: use it as the starting point for a new project, or
+read it and take the parts you want.
 
 ## Start here
 

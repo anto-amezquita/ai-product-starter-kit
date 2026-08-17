@@ -20,7 +20,7 @@ But a project that lives only in prompts has very little memory.
 
 The product direction is scattered across conversations. The reasons behind decisions are easy to lose. A model may solve similar problems differently on different days because the relevant context is not reliably present. Over time, the human becomes the only stable source of truth — which means they must keep repeating, correcting, and re-explaining the project.
 
-Recent writing on AI-assisted development has started to describe this problem more directly. Martin Fowler’s “Context Anchoring” argues that decision context should be treated as **external state**: a living reference outside the conversation that preserves decisions for both humans and AI across sessions. Structured prompt-driven development makes a related argument: prompts and decisions become first-class artifacts in version control, reducing reinvention and helping teams govern AI-assisted work more consistently. citeturn390735search3turn390735search15
+Recent writing on AI-assisted development has started to describe this problem more directly. Martin Fowler’s “Context Anchoring” argues that decision context should be treated as **external state**: a living reference outside the conversation that preserves decisions for both humans and AI across sessions. Structured prompt-driven development makes a related argument: prompts and decisions become first-class artifacts in version control, reducing reinvention and helping teams govern AI-assisted work more consistently.
 
 The issue is not that AI lacks ability. The issue is that a project without durable context asks both the human and the model to keep reconstructing the same product from memory.
 
@@ -28,7 +28,7 @@ The issue is not that AI lacks ability. The issue is that a project without dura
 
 ## What spec-driven development gets right
 
-Spec-driven development is a useful response to this problem. GitHub’s Spec Kit describes it as a way to focus on product scenarios rather than writing undifferentiated code, and its workflow begins by clarifying what should be built before moving into planning and tasks. That is a major improvement over starting directly with code. citeturn390735search2turn390735search6
+Spec-driven development is a useful response to this problem. GitHub’s Spec Kit describes it as a way to focus on product scenarios rather than writing undifferentiated code, and its workflow begins by clarifying what should be built before moving into planning and tasks. That is a major improvement over starting directly with code.
 
 A good spec forces a project to answer questions such as:
 
@@ -93,7 +93,7 @@ The `/specs` folder contains the concrete product or feature specs currently bei
 
 ### ADRs preserve remembered reasons
 
-The `/decisions` folder stores Architecture Decision Records. An ADR is a short document that captures one significant decision, its context, and its consequences. That matters because code often reveals *what* changed, but not *why*. ADRs preserve the reasoning behind choices so future humans and future AI agents do not have to guess. citeturn390735search19
+The `/decisions` folder stores Architecture Decision Records. An ADR is a short document that captures one significant decision, its context, and its consequences. That matters because code often reveals *what* changed, but not *why*. ADRs preserve the reasoning behind choices so future humans and future AI agents do not have to guess.
 
 ### Skills are methods, not memory
 
@@ -117,7 +117,7 @@ ADRs = remembered reasons
 Linear = shared visibility
 ```
 
-OpenAI’s Codex documentation makes a similar distinction: `AGENTS.md` provides durable repository guidance, while skills package repeatable task-specific workflows. Skills themselves are modular bundles built around a `SKILL.md` manifest, which makes them a good fit for recurring product practices such as project kickoff, spec writing, frontend work, or review. citeturn390735search21turn390735search1turn390735search9
+OpenAI’s Codex documentation makes a similar distinction: `AGENTS.md` provides durable repository guidance, while skills package repeatable task-specific workflows. Skills themselves are modular bundles built around a `SKILL.md` manifest, which makes them a good fit for recurring product practices such as project kickoff, spec writing, frontend work, or review.
 
 The practical effect is that AI does not only know more about the project. It also learns how we prefer to work on the project.
 
@@ -151,7 +151,7 @@ Linear’s structure maps well to the system:
 - **Milestones** represent stages in a project lifecycle.
 - **Project documents** and links gather relevant materials in one visible place.
 - **Project updates** communicate progress, risks, and next steps.
-- **Project templates** make the workflow reusable across new projects. citeturn390735search20turn390735search16turn390735search0turn390735search12turn390735search4turn390735search8
+- **Project templates** make the workflow reusable across new projects.
 
 This avoids a common failure mode: either project knowledge lives only in task trackers, where it becomes shallow and fragmented, or it lives only in documents, where it becomes rich but invisible in day-to-day work. The two layers solve different problems and become stronger together.
 
@@ -210,7 +210,7 @@ This is not bureaucracy. It is a way to protect creative energy for the choices 
 
 ### 3. It reduces repeated explanation
 
-Codex recommends making successful guidance reusable with `AGENTS.md` instead of repeating it manually in every prompt. Its documentation describes `AGENTS.md` as durable project guidance that travels with the repository and applies before work begins. citeturn390735search5turn390735search21
+Codex recommends making successful guidance reusable with `AGENTS.md` instead of repeating it manually in every prompt. Its documentation describes `AGENTS.md` as durable project guidance that travels with the repository and applies before work begins.
 
 The same principle applies to product intent, brand direction, architecture, quality, and team workflow. Once a decision is likely to matter more than once, it deserves a stable home.
 
@@ -244,7 +244,7 @@ The core documents should be stable enough to guide decisions, but not sacred. S
 
 The purpose is not to predict the entire product in advance. The purpose is to make the project’s current understanding explicit, so new learning can improve the system instead of merely creating drift.
 
-That is also where the setup differs from a rigid waterfall interpretation of specifications. The point is not to finish thinking before building; it is to make thinking visible enough that building remains aligned. Spec-driven development provides the feature-level discipline. The product operating system adds durable context around it. Linear adds shared visibility while the work is moving. citeturn390735search2turn390735search15
+That is also where the setup differs from a rigid waterfall interpretation of specifications. The point is not to finish thinking before building; it is to make thinking visible enough that building remains aligned. Spec-driven development provides the feature-level discipline. The product operating system adds durable context around it. Linear adds shared visibility while the work is moving.
 
 ---
 
@@ -318,7 +318,14 @@ The goal is to make sure that when something surprising does happen, it becomes 
 
 ## Sources
 
-- GitHub Spec Kit documentation on spec-driven development. citeturn390735search2turn390735search6
-- OpenAI Codex documentation on `AGENTS.md`, skills, and durable project guidance. citeturn390735search1turn390735search5turn390735search9turn390735search21
-- Martin Fowler on context anchoring, structured prompt-driven development, and Architecture Decision Records. citeturn390735search3turn390735search15turn390735search19
-- Linear documentation on initiatives, projects, milestones, documents, updates, and project templates. citeturn390735search20turn390735search16turn390735search0turn390735search12turn390735search4turn390735search8
+- GitHub, *Spec Kit* — toolkit and documentation for spec-driven development.
+  <https://github.com/github/spec-kit> · <https://github.github.com/spec-kit/>
+- Birgitta Böckeler, *Understanding Spec-Driven Development: Kiro, spec-kit, and Tessl* — on the spec-first / spec-anchored / spec-as-source distinction.
+  <https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html>
+- Martin Fowler, *Patterns for Reducing Friction in AI-Assisted Development* — where Context Anchoring is defined, alongside Knowledge Priming, Design-First Collaboration, Sensible Defaults, and the Feedback Flywheel.
+  <https://martinfowler.com/articles/reduce-friction-ai/>
+- Martin Fowler, *Architecture Decision Record*.
+  <https://martinfowler.com/bliki/ArchitectureDecisionRecord.html>
+- The `AGENTS.md` convention. <https://agents.md>
+- OpenAI Codex documentation on `AGENTS.md`, skills, and durable project guidance.
+- Linear documentation on initiatives, projects, milestones, documents, updates, and project templates.
