@@ -9,10 +9,11 @@ deliberate, what "done" means on this project. That reasoning usually lives in
 a chat window that closes, so the next session re-argues it instead of building
 on it.
 
-This kit keeps it. Six documents hold the project's stable truth, specs hold
-feature definitions, decisions hold the calls you've made and why, and eight
-skills hold the repeatable ways of working with all of it. Agents enter through
-`AGENTS.md` and read the same files a person would — nothing is written twice.
+This kit keeps it. Seven documents hold the project's stable truth (six
+stable references plus a live backlog), specs hold feature definitions,
+decisions hold the calls you've made and why, and eight skills hold the
+repeatable ways of working with all of it. Agents enter through `AGENTS.md`
+and read the same files a person would — nothing is written twice.
 
 A decision kept together with its reasoning can be amended when you know
 better. One kept without it can only be argued again from the start.
@@ -28,13 +29,14 @@ read it and take the parts you want.
 
 ## Start here
 
-1. Read `docs/product-north-star.md`
-2. Read `docs/brand.md`
-3. Read `docs/design.md`
-4. Read `docs/content.md`
-5. Read `docs/architecture.md`
-6. Read `docs/quality.md`
-7. For feature work, read the relevant file in `/specs`
+1. Read `docs/backlog.md` — the only one of these expected to change turn to turn
+2. Read `docs/product-north-star.md`
+3. Read `docs/brand.md`
+4. Read `docs/design.md`
+5. Read `docs/content.md`
+6. Read `docs/architecture.md`
+7. Read `docs/quality.md`
+8. For feature work, read the relevant file in `/specs`
 
 ## Working model
 
@@ -54,14 +56,15 @@ read it and take the parts you want.
 
 ## Suggested setup order for a new project
 
-1. Fill in `docs/product-north-star.md`
-2. Adapt `docs/brand.md`
-3. Adapt `docs/design.md`
-4. Complete `docs/content.md`
-5. Complete `docs/architecture.md`
-6. Review `docs/quality.md`
-7. Create the first product spec in `/specs`
-8. Start building from that spec
+1. Create `docs/backlog.md` from the template (usually starts empty)
+2. Fill in `docs/product-north-star.md`
+3. Adapt `docs/brand.md`
+4. Adapt `docs/design.md`
+5. Complete `docs/content.md`
+6. Complete `docs/architecture.md`
+7. Review `docs/quality.md`
+8. Create the first product spec in `/specs`
+9. Start building from that spec
 
 ## Optional cross-LLM adapter files
 

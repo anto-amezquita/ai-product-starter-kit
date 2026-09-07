@@ -9,6 +9,7 @@ Turn the decisions into a usable project starting point.
 Create or update:
 
 ```txt
+/docs/backlog.md
 /docs/product-north-star.md
 /docs/brand.md
 /docs/design.md
@@ -61,6 +62,7 @@ This step is optional. The offer is enough.
 Read the project docs in `/docs`, then implement Phase 1 of `/specs/YYYY-MM-DD-mvp.md`.
 
 Before coding:
+- check `backlog.md` for any open item this work should account for
 - confirm the scope against `product-north-star.md`
 - follow the visual and interaction rules in `brand.md`, `design.md`, and `content.md`
 - follow the technical conventions in `architecture.md`

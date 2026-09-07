@@ -142,6 +142,7 @@ Show a compact progress indicator at natural checkpoints.
 
 By the end, create or update:
 
+- `docs/backlog.md`
 - `docs/product-north-star.md`
 - `docs/brand.md`
 - `docs/design.md`

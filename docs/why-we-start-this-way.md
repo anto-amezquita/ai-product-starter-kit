@@ -54,6 +54,7 @@ The starter kit separates project knowledge into a few durable layers:
 
 ```txt
 /docs
+  backlog.md
   product-north-star.md
   brand.md
   design.md
@@ -86,6 +87,8 @@ The files in `/docs` hold the stable truths of the product:
 - `linear-workflow.md` defines how project knowledge becomes visible team progress without leaving the repository as source of truth.
 
 This makes context durable. It no longer has to be inferred from the latest chat thread.
+
+`backlog.md` is the one deliberate exception to “memory” in this folder. Everything else in `/docs` is written to stay true for a long time; `backlog.md` is written to be edited every session — it holds only what's currently open, and an item leaves it the moment it ships or graduates into a spec. It sits in `/docs` for the same reason the memory files do — one place an agent or a person checks first — not because it shares their stability.
 
 ### Specs are current decisions
 

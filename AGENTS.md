@@ -3,20 +3,21 @@
 ## Agent Quick Start
 
 - Purpose: help an AI coding agent become productive quickly in this repo.
-- Read core docs first: [docs/product-north-star.md](docs/product-north-star.md), [docs/architecture.md](docs/architecture.md), [docs/quality.md](docs/quality.md), and the relevant file in `/specs`.
+- Read core docs first: [docs/backlog.md](docs/backlog.md) — check this first, it's the only doc here expected to change turn to turn — then [docs/product-north-star.md](docs/product-north-star.md), [docs/architecture.md](docs/architecture.md), [docs/quality.md](docs/quality.md), and the relevant file in `/specs`.
 - Skills: use the manifests under `skills/` for repeatable workflows (see `skills/README.md`).
 - Finding build/test commands: look for `package.json`, `Makefile`, or `README.md` in the repo root; if none exist, ask a human before running environment-changing commands.
 - Keep changes here minimal and link to repository docs rather than duplicating them.
 
 Before doing meaningful product work, read:
 
-1. `docs/product-north-star.md`
-2. `docs/brand.md`
-3. `docs/design.md`
-4. `docs/content.md`
-5. `docs/architecture.md`
-6. `docs/quality.md`
-7. the relevant file in `/specs`, if one exists
+1. `docs/backlog.md` — is there open work already in flight?
+2. `docs/product-north-star.md`
+3. `docs/brand.md`
+4. `docs/design.md`
+5. `docs/content.md`
+6. `docs/architecture.md`
+7. `docs/quality.md`
+8. the relevant file in `/specs`, if one exists
 
 For new features or significant changes:
 
