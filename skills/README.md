@@ -7,6 +7,9 @@ This folder contains reusable agent skills: compact workflows that teach an AI a
 ### `project-kickoff`
 Use when starting a new digital product from a rough idea.
 
+### `brand-direction`
+Use after the kickoff's brand stage to turn the brief in `docs/brand.md` into one chosen visual direction: teardown, three directions, decision, tokens.
+
 ### `product-spec`
 Use when turning a product or feature idea into a buildable specification.
 
@@ -40,6 +43,7 @@ Use when creating the team-visible Linear structure for a new product project.
 ```txt
 rough idea
 → project-kickoff
+→ brand-direction, before the first screen is built
 → project-setup-linear
 → product-spec
 → information-architecture
