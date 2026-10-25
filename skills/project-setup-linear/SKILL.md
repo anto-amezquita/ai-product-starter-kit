@@ -72,6 +72,15 @@ If the project is very small or early, propose a reduced version. Explain the tr
 
 If Linear API access is available: create the structure directly.
 
+Beyond the project itself, a project that will run its work from Linear needs (see "Issue workflow" in `docs/linear-workflow.md`):
+
+- **Issue statuses:** `Spec` and `Design` as Started statuses before `In Progress`. The Linear MCP can't create statuses; ask the person to add them, then check with `list_issue_statuses`.
+- **Labels:** the ones in `docs/linear-workflow.md`, plus `agent:claude`.
+- **GitHub integration** connected, with access to this repo, and the team's PR automations set (draft PR → In Progress, PR opened or review requested → In Review, merged → Done). Neither can be read through the MCP; ask for a screenshot or confirmation.
+- **The repo link:** the GitHub URL in the project description and resources.
+- **`AGENTS.md`:** fill in the `Linear: team …, project …` line so `start-task` and `backlog-sync` find the project.
+- **Existing backlog:** if `docs/backlog.md` already holds open items, create one issue per item (source link, priority, labels, `blocked by` relations), then run `backlog-sync` so the file becomes the snapshot.
+
 If not: produce a copy-ready plan the user can apply manually — every element should be named and ready to paste.
 
 In either case, explain any deviation from the defaults in `docs/linear-workflow.md`.
@@ -122,3 +131,4 @@ In either case, explain any deviation from the defaults in `docs/linear-workflow
 - Are blockers, assumptions, and revisits easy to find?
 - Could a teammate understand the project state quickly?
 - Is the Linear structure helping the work rather than duplicating the repo?
+- Does `AGENTS.md` name the Linear team and project, and does `docs/backlog.md` match Linear after `backlog-sync`?

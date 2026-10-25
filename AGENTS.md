@@ -3,6 +3,7 @@
 ## Agent Quick Start
 
 - Purpose: help an AI coding agent become productive quickly in this repo.
+- Linear: team [KEY], project [Project name]. Open work lives there; `docs/backlog.md` is its snapshot. Start an issue with `/start-task [KEY-123]`, finish it with `/finish-task`. Delete this line if the project doesn't use Linear.
 - Read core docs first: [docs/backlog.md](docs/backlog.md) — check this first, it's the only doc here expected to change turn to turn — then [docs/product-north-star.md](docs/product-north-star.md), [docs/architecture.md](docs/architecture.md), [docs/quality.md](docs/quality.md), and the relevant file in `/specs`.
 - Skills: use the manifests under `skills/` for repeatable workflows (see `skills/README.md`).
 - Finding build/test commands: look for `package.json`, `Makefile`, or `README.md` in the repo root; if none exist, ask a human before running environment-changing commands.
@@ -49,3 +50,7 @@ Use the relevant skill when the task matches:
 - `skills/accessibility-review/SKILL.md` — reviewing product work for accessibility before it is considered complete
 - `skills/quality-gate/SKILL.md` — checking whether meaningful work is actually ready to ship
 - `skills/project-setup-linear/SKILL.md` — representing a new product project in Linear so progress and revisits are visible
+- `skills/start-task/SKILL.md` — starting a Linear issue: its own worktree on Linear's branch name, phase status, owner
+- `skills/finish-task/SKILL.md` — quality gate, PR with `Fixes [ID]`, and a plain-language record on the issue
+- `skills/backlog-sync/SKILL.md` — regenerating `docs/backlog.md` from the Linear project
+- `skills/project-update/SKILL.md` — drafting a Linear project update for non-coders

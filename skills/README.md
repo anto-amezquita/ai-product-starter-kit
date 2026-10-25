@@ -31,6 +31,18 @@ Use near the end of meaningful work to judge whether it is actually ready accord
 ### `project-setup-linear`
 Use when creating the team-visible Linear structure for a new product project.
 
+### `start-task`
+Use when starting work on a Linear issue: its own git worktree on Linear's branch name, the right phase status, and the owner recorded.
+
+### `finish-task`
+Use when an issue's work is ready for review: quality gate, PR with `Fixes <ID>`, follow-up issues, and a plain-language record on the issue.
+
+### `backlog-sync`
+Use to regenerate `docs/backlog.md` from the repo's Linear project.
+
+### `project-update`
+Use to draft a Linear project update (health and what changed) for non-coders.
+
 ## Mental model
 
 - Docs = memory
@@ -47,10 +59,15 @@ rough idea
 → project-setup-linear
 → product-spec
 → information-architecture
-→ frontend-design
-→ design-system, when shared patterns emerge
+
+then, per Linear issue:
+→ start-task
+→ frontend-design / design-system, as the work needs
 → accessibility-review
-→ quality-gate
+→ quality-gate (inside finish-task)
+→ finish-task
+→ backlog-sync, after merge
+→ project-update, weekly
 ```
 
 ## Skill structure
