@@ -50,27 +50,37 @@ Use these when the user needs help choosing.
 
 ## Output from this stage
 
-Draft content for `docs/brand.md`:
+Draft content for `docs/brand.md`. Four sections are required, because they are the brief the visual exploration starts from:
 
-- essence
-- desired feelings
-- what we are not
+- §1 Brand essence: one sentence, three feelings, three "not"s
+- §4 Brand attributes: three to five, each with what it means in practice
+- §5 Personality sliders: a lean on every row
+- §9 Visual direction: feel, avoid, keywords
+
+Draft the rest when the conversation gives you material:
+
 - brand promise
 - audience relationship
-- attributes
 - voice
-- visual direction
-- early typography/colour/motion direction if known
+- early typography, colour or motion direction, if known
+
+## Visual direction comes after
+
+This stage settles the brand in words. The visual half (reference teardown, three directions, a decision, tokens) takes hours and a design tool, so it runs separately with `skills/brand-direction/SKILL.md`, before Stage 6 builds the first screen.
+
+Don't skip it. A product that goes to build with only words ends up on its tools' defaults and looks like everything else built with them. If it hasn't run yet, list it as an open item in the checkpoint.
 
 ## Completion checklist
 
 Before moving to Stage 4, confirm you have all of these:
 
-- Desired feeling captured (how the product should feel to use)
-- What it should not feel like named
+- §1 filled: essence sentence, three desired feelings, three "not"s
+- §4 filled: attributes, each with what it means in practice
+- §5 filled: a lean on every slider
+- §9 filled: feel, avoid, keywords
 - Audience relationship defined (trusted guide / capable tool / expert collaborator / etc.)
-- Visual character direction noted — even a rough one
-- Voice direction noted — at least one concrete signal
+- Voice direction noted, with at least one concrete signal
+- Visual direction (`brand-direction` skill) scheduled before Stage 6, or noted as an open item
 
 ## Stage checkpoint
 
